@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: white;
+  
 }
 body{
   color: white;
@@ -10,6 +11,10 @@ body{
   background-size: cover; /* Faz a imagem cobrir toda a tela */
   background-attachment: fixed; /* Mantém o fundo fixo ao rolar a página */
   background-position: center;
+  background-color: #0B95E3!important;
+}
+.navbar{
+  background-color: black;
 }
 #logo{
   height: auto;
@@ -45,7 +50,7 @@ body{
   cursor: default;
   font-size: larger;
   font-weight: 460;
-  background: linear-gradient(to right, #224398, #eb1571, #ffbd00, #23b762, #0b95e3);
+  background: linear-gradient(to right, #224398, #EB1571, #FFBD00, #23B726, #0B95E3);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -96,8 +101,9 @@ body{
 #links-uteis{
   display: flex;
   flex-direction: row;
-  background-color: black;
+  background-color: #0B95E3;
   height: 4vh;
+  font-weight: 600;
 }
 @media (max-width: 1000px){
   #links-uteis{
@@ -128,7 +134,15 @@ body{
 #todosprodutos{
   background-color: transparent;
   border: none;
+  font-weight: 700;
 }
+
+.carousel img{
+  width: 100%;
+  height: 400px;
+}
+
+
 .todos-produtos{
   display: flex;
 }
@@ -208,6 +222,7 @@ body{
 #ul-categorias img{
   width: 150px;
 }
+
 #ul-categorias li{
   display: flex;
   margin-right: 20px;
@@ -219,71 +234,94 @@ body{
   align-items: center;
   margin: 20px 0;
   text-decoration: none;
+  color: #000;
+  font-weight: 600;
 }
-/* Remove os estilos padrão das setas do Swiper */
+#ul-categorias a:hover{
+  color: #FFBD00;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 40px;
+  height: 40px;
+  color: black;
+  border-radius: 50%; /* Torna os botões circulares */
+  cursor: pointer;
+  
+}
+
+/* Remove o estilo padrão das setas */
 .swiper-button-prev::after,
 .swiper-button-next::after {
-    display: none; /* Oculta os ícones padrões do Swiper */
+  font-size: 0; /* Remove as setas padrão */
+  content: '';
+  width: 25px;
+  height: 25px;
+  background-image: url('../imagens/seta\ .png');
+  background-size: cover; /* Faz a imagem cobrir todo o fundo */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  background-position: center; /* Centraliza a imagem */
+   /* Forma a seta */
+  
+}
+.swiper-button-next::after {
+  transform: rotate(-180deg); /* Ajusta a rotação da seta para "avançar" */
 }
 
-/* Estiliza os botões de navegação */
-.btn-prev-1, .btn-next-1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px; /* Tamanho maior do botão */
-    height: 60px; /* Tamanho maior do botão */
-    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semitransparente */
-    border-radius: 50%; /* Torna o botão arredondado */
-    cursor: pointer; /* Mostra o cursor de clique */
-    color: white; /* Cor do ícone */
-    box-sizing: border-box; /* Garante que o padding não afete o tamanho do botão */
-    padding: 0; /* Remove padding para garantir que o ícone ocupe todo o espaço */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+  background-color: #212529;
+  height: 30vh;
 }
 
-/* Aumenta o tamanho do ícone Ionicons */
-.btn-prev-1 ion-icon,
-.btn-next-1 ion-icon {
-    font-size: 36px; /* Aumenta o tamanho do ícone */
-    display: block; /* Garante que o ícone seja tratado como bloco */
-    width: 100%; /* Garante que o ícone ocupe todo o espaço do botão */
-    height: 100%; /* Garante que o ícone ocupe todo o espaço do botão */
-    object-fit: contain; /* Garante que o ícone se ajuste ao tamanho do botão */
+.footer-content{
+  margin-top: 20px;
 }
 
-/* Alinhamento do Swiper */
-.mySwiper-categorias {
-  display: flex;
-  justify-content: center; /* Alinha os itens no centro */
-  width: 100%; /* Garante que o swiper ocupe toda a largura */
-}
-
-/* Alinhamento dos slides */
-.swiper-slide {
-  display: flex;
-  justify-content: center; /* Alinha o conteúdo do slide */
-  align-items: center; /* Garante que o conteúdo do slide esteja centralizado verticalmente */
-}
-
-/* Fixa os botões de navegação nas laterais da tela */
-.swiper-button-next, .swiper-button-prev {
-  position: fixed; /* Fixa os botões na tela */
-  top: 50%; /* Centraliza verticalmente */
-  transform: translateY(-50%); /* Ajusta para que os botões fiquem no centro */
-  z-index: 10; /* Garante que os botões fiquem acima dos outros elementos */
-  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semitransparente */
-  border-radius: 50%; /* Torna o botão arredondado */
-  cursor: pointer; /* Mostra o cursor de clique */
-  color: white; /* Cor do ícone */
-  padding: 0; /* Remove padding para garantir que o ícone ocupe todo o botão */
-}
-
-/* Botão anterior (esquerda) */
-.swiper-button-prev {
-  left: 10px; /* Fixa o botão à esquerda */
-}
-
-/* Botão próximo (direita) */
-.swiper-button-next {
-  right: 10px; /* Fixa o botão à direita */
+#logo-footer{
+  width: 170px;
+  height: auto;
+  margin-right: 20px;
 }

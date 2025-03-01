@@ -45,13 +45,13 @@ const swiper1 = new Swiper('.mySwiper-categorias', {
  
  
   function enviarWhatsAppIcone() {
-    const telefone = "11995505140";
+    const telefone = "5511995505140";
     const url = `https://wa.me/${telefone}?`;
     window.open(url, "_blank");
 }
 
 function enviarWhatsAppSuporte() {
-  const telefone = "11995505140";
+  const telefone = "5511995505140";
   const url = `https://wa.me/${telefone}?text=Olá, estou com duvidas, gostaria de um suporte para me auxiliar!`;
   window.open(url, "_blank");
 }
